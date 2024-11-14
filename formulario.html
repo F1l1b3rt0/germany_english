@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validacion de formulario</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        form{
+            padding: 5px;
+            text-align: center;
+            width: 200px;
+            height: auto;
+            background-color: blue;
+            color: aliceblue;
+        }
+        input{
+            border-radius: 5px;
+            margin: 5px;
+        }
+        button{
+            border-radius: 5px;
+            background-color: black;
+            color: aliceblue;
+            border-style: none;
+        }
+        button:hover{
+            background-color: aliceblue;
+            color:black ;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ingrese los datos pedidos</h1>
+    <form action="formulario.php" method="post">
+        <label for="edad">Ingrese su Edad:</label>
+        <input type="number" name="edad" id="edad">
+        <br>
+        <label for="nombre">Ingrese su nombre</label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <button>Enviar información</button>
+    </form>
+</body>
+</html>
