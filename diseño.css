@@ -1,0 +1,230 @@
+body{
+    background-color: wheat;
+    font-family: "Hanalei Fill";
+    color: saddlebrown;
+}
+
+h2{
+    font-family: "Micro 5";
+    font-size: 1cm;
+    color: green;
+}
+h4{ 
+        font-family: "Micro 5";
+        font-size: 1cm;
+        color: green;
+}
+header{
+    text-align: center;
+    background-color: green;
+    height: 5cm;
+    border: 2mm solid black;
+    margin: 0%;
+}
+header h1{
+    font-family: fantasy;
+    font-size: 2cm;
+    color: ghostwhite;
+    padding: 2mm;
+    
+}
+.parrafo-de-introduccion{
+    background-color: burlywood;
+    margin-top: 2cm;
+    border-radius: 10px;
+    border: 1mm solid black;
+    margin-bottom: 2cm;
+    margin-left: 7cm;
+    margin-right: 1cm               ;
+    padding: 6mm;
+    text-align: right;
+    transform: translateX(100%); 
+    animation: aparecerDesdeDerecha 1s forwards;
+}
+.ejemplo-del-parrafo-de-introduccion{
+    background-color: burlywood;
+    margin-top: 2cm;
+    border-radius: 10px;
+    border: 1mm solid black;
+    margin-bottom: 2cm;
+    margin-right: 7cm;
+    margin-left: 1cm;
+    padding: 6mm;
+    text-align: left;
+    transform: translateX(-100%); 
+    animation: aparecerDesdeDerecha 1s forwards;
+  }
+
+
+  @keyframes aparecerDesdeIzquierda {
+    to {
+      transform: translateX(0); 
+    }
+}
+@keyframes aparecerDesdeDerecha{
+    to {
+      transform: translateX(0); 
+    }
+}
+.parrafo-de-desarrollo{
+    background-color: burlywood;
+    margin-top: 2cm;
+    border-radius: 10px;
+    border: 1mm solid black;
+    margin-bottom: 2cm;
+    margin-left: 7cm;
+    margin-right: 1cm;
+    padding: 6mm;
+    text-align: right;
+    transform: translateX(100%); 
+    animation: aparecerDesdeIzquierda 1s forwards;
+}
+.estructura-del-past{
+    align-content: center;
+    background-color: burlywood;
+    margin-top: 2cm;
+    border-radius: 10px;
+    border: 1mm solid black;
+    margin-bottom: 2cm;
+    margin-right: 7cm;
+    margin-left: 1cm;
+    padding: 6mm;
+    text-align: left;
+    transform: translateX(-100%); 
+    animation: aparecerDesdeDerecha 1s forwards;
+}
+table{
+    background-color: beige;
+    border: 2mm solid saddlebrown;
+    font-family:  'Minecraft';
+    align-items: center;
+
+}
+
+.texto-animado {
+    font-size: 2em;
+    font-weight: bold;
+    color: green;
+    animation: momo 10s infinite alternate;
+  }
+
+  @keyframes momo {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  .text-animado {
+    font-size: 2em;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .letra {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: caida 0.5s forwards;
+  }
+
+  @keyframes caida {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  table {
+    width: 80%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: darkgreen;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    border: 1px solid ghostwhite;
+    background-color: burlywood;
+}
+
+tr:nth-child(4), tr:nth-child(7), tr:nth-child(10), tr:nth-child(13) {
+    background-color: green;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color:green;
+}
+
+tr:nth-child(4) td, tr:nth-child(7) td, tr:nth-child(10) td, tr:nth-child(13) td {
+    border-bottom: 2px solid yellowgreen;
+}
+.header {
+  background-color: green;
+  padding: 20px 10px;
+}
+.header a {
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 10px;
+}
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+.header a:hover {
+  background-color: #89ff99;
+  color: rgb(255, 255, 255);
+}
+.header a.active {
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+}
+.header-right {
+  float: right;
+}
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+.header {   
+  position: sticky;   
+  top: 0; 
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
