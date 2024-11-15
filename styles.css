@@ -1,59 +1,142 @@
 body {
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
+    background-color:#d6ffe8;
+
+
+
+    @import url(https://db.onlinewebfonts.com/c/14936bb7a4b6575fd2eee80a3ab52cc2?family=Feather+Bold);
+    @font-face {
+        font-family: "Feather Bold";
+        src: url("https://db.onlinewebfonts.com/t/14936bb7a4b6575fd2eee80a3ab52cc2.eot");
+        src: url("https://db.onlinewebfonts.com/t/14936bb7a4b6575fd2eee80a3ab52cc2.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/14936bb7a4b6575fd2eee80a3ab52cc2.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/14936bb7a4b6575fd2eee80a3ab52cc2.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/14936bb7a4b6575fd2eee80a3ab52cc2.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/14936bb7a4b6575fd2eee80a3ab52cc2.svg#Feather Bold")format("svg");
+    } 
+    font-family: "Feather Bold";
+    color:#078b4e;
+}
+    section {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: rgba(245, 245, 245, 0.767);
+        border-radius: 30px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 900px;
+    }
+
+    .header {
+        overflow: hidden;
+        background-color: #2fc981;
+        padding: 20px 10px;
+      }
+      .header a {
+        float: left;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 10px;
+      }
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .header a:hover {
+        background-color: #89ff99;
+        color: rgb(255, 255, 255);
+      }
+      .header a.active {
+        background-color: rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
+      }
+      .header-right {
+        float: right;
+      }
+      @media screen and (max-width: 500px) {
+        .header a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+        .header-right {
+          float: none;
+        }
+      }
+      .header {   
+        position: sticky;   
+        top: 0; 
+    }
+
+* {
+    margin: 1;
+    padding: 1;
+    box-sizing: border-box;
+    border-radius:20px
 }
 
-.container {
-    max-width: 900px;
-}
-
-h2, h3 {
-    color: #333;
-}
-
-p, li {
-    color: #555;
-    font-size: 1rem;
-}
-
-.table {
-    margin-top: 20px;
-}
-
-.table th {
-    background-color: #007bff;
-    color: #fff;
-}
-
-.table-responsive {
+.tabla-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
     overflow-x: auto;
 }
 
-.table-bordered th,
-.table-bordered td {
-    border: 1px solid #ddd;
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.list-group-item {
-    border: none;
+
+table {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-radius:5px;
+}
+
+th {
+    background-color: #4caf81;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    color: #13693a;
+}
+
+tbody tr:nth-child(odd) {
     background-color: #f9f9f9;
 }
 
-.list-group-item:hover {
-    background-color: #e9ecef;
+tbody tr:hover {
+    background-color: #e6f7e6;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    h2, h3 {
-        font-size: 1.5rem;
-    }
+td[colspan="2"] {
+    text-align: center;
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
 
-    p, li {
-        font-size: 0.9rem;
-    }
 
-    .table {
-        font-size: 0.85rem;
-    }
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:nth-child(4n+1) {
+    background-color: #e6e6e6;
+    font-weight: bold;
+    text-align: center;
 }
