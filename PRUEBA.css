@@ -1,0 +1,226 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+
+    body {
+        font-family:copperplate;
+        background-color: #004d40;
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        text-align: center; 
+    }
+
+  
+    header {
+        background-color: #00796b; 
+        color: white;
+        padding: 15px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000; 
+        text-align: center;
+       text-shadow: 0 0 5px white  , 0 0 25px white  ;
+    } 
+
+    header h1 {
+        font-size: 1.8em;
+    }
+    header h1:hover {
+        cursor: pointer;
+        transform: scale(1.03); 
+    }
+
+
+    
+    nav {
+        background-color: #004d40; 
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        top: 70px; 
+        left: 0;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: black;
+        padding: 10px 20px;
+        font-weight: bold;
+        margin: 0 15px;
+        text-shadow: 0 0 5px white  , 0 0 25px white  ;
+
+    }
+
+    nav a:hover {
+        cursor: pointer;
+        transform: scale(1.03); 
+        color: white;
+        
+    }
+
+    a:hover{
+        cursor: pointer;
+        transform: scale(1.03); 
+        color: white;  
+    }
+
+
+    /* Carrusel de imágenes */
+    .carousel {
+        position: relative;
+        width: 100%;
+        max-height: 600px;
+        overflow: hidden;
+        margin-top: 140px; 
+    }
+
+    .carousel img {
+        width: 1600px;
+        height: 1000px;
+        display: none;
+    }
+
+    .carousel img.active {
+        display: block;
+    }
+
+    .carousel-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+
+    .carousel-nav button {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 1.5em;
+    }
+
+    .carousel-nav button:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    /* Estilos generales de las secciones */
+    .section {
+        margin: 30px 0;
+        background-color: #0a2739 ;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left; 
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+
+    }
+   
+    .section:hover{
+   
+       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .section h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: white; 
+        text-shadow: 0 0 5px white  , 0 0 25px white  ;
+    }
+
+
+    .section p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        line-height: 1.8;
+        color: white; 
+        text-shadow: 0 0 5px black  , 0 0 25px black;  
+    }
+
+    .section ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        color: white; 
+    }
+
+    
+    .section-content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+       
+    }
+
+    .section-content img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%; 
+        object-fit: cover; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        flex-wrap: wrap ;
+    }
+
+    .imagenes img:hover {
+       cursor:pointer;
+          filter: grayscale(1);
+          transform: scale(1.03);
+
+
+    }
+
+
+    .section-content.reverse {
+        flex-direction: row-reverse; 
+    }
+
+   
+    .section img.large {
+        width: 80%; 
+        height: 600px;
+        margin-top: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Pie de página */
+    footer {
+        background-color: #081d2a ; 
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+        margin-top: auto; 
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    
+    .content {
+        flex: 1;
+        padding-bottom: 40px;
+    }
+
+   
+    .content a {
+        text-decoration: none;
+        color: #00796b;
+    }
