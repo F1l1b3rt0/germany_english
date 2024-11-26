@@ -7,29 +7,201 @@
     <title>Formulario sobre "When" y "While"</title>
 </head>
 <body>
+<style>
+    .result {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    .correct {
+        color: #28a745; /* Verde para respuestas correctas */
+        text-shadow: 0 0 30px green , 0 0 45px green;
+    }
+    .incorrect {
+        color: #dc3545; /* Rojo para respuestas incorrectas */
+        text-shadow: 0 0 30px #d32f2f, 0 0 45px #d32f2f;
+    }
+    .question {
+        font-weight: bold;
+    }
+ 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
- <header>
-        <h1>GERMANY ENGLISH</h1>   
-    </header>
+    h2{
+        color: #f2d7d5; 
+        text-shadow: 0 0 30px #d32f2f, 0 0 45px #d32f2f;
+    }
+
+    label{
+        color: white;
+        text-shadow: 0 0 5px white, 0 0 25px white;
+    }
+
+    body {
+        font-family:copperplate;
+        background-color: #283747; 
+        line-height: 1.6;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        text-align: center; 
+    }
+
+    header {
+        background-color: #121920; 
+        color: white;
+        padding: 15px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000; 
+        text-align: center;
+        text-shadow: 0 0 5px white, 0 0 25px white;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+    header h1:hover {
+        cursor: pointer;
+        transform: scale(1.03); 
+    }
+
+    nav {
+        background-color: #17202a; 
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        top: 70px; 
+        left: 0;
+        z-index: 1000; 
+    }
+
+    nav a {
+        text-decoration: none;
+        color: black;
+        padding: 10px 20px;
+        font-weight: bold;
+        margin: 0 15px;
+        text-shadow: 0 0 5px #ffe2e2, 0 0 65px red;
+    }
+
+    nav a:hover {
+        cursor: pointer;
+        transform: scale(1.03); 
+        color: white;
+    }
+
+    .section {
+        margin: 30px 0;
+        background-color: #1b2631;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 1050px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left; 
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    }
+   
+    .section:hover{
+       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .section h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #f2d7d5; 
+        text-shadow: 0 0 30px #d32f2f, 0 0 45px #d32f2f;
+    }
+
+    .section p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        line-height: 1.8;
+        color: white; 
+        text-shadow: 0 0 5px black, 0 0 25px black;  
+    }
+
+    .section ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        color: white; 
+    }
     
-    <nav>
-        <a href="#intro">Past continuos</a>
-        <a href="#cuando">When y While</a>
-        <a href="#mientras">Juego</a>
-        <a href="#comparacion">Formulario</a>
-        <a href="#usos">Mas</a>
-        
-    </nav>
+    .section-content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .button-container {
+        margin-top: 20px;
+    }
+
+    /* Estilo para los botones */
+    button {
+        padding: 15px 30px; /* Aumenté el tamaño del botón */
+        background-color:#121920; /* Color verde */
+        color: white;
+        font-size: 1.5em; /* Aumenté el tamaño de la fuente */
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 10px;
+    }
+
+    button:hover {
+        background-color: #218838; /* Verde más oscuro al pasar el ratón */
+    }
+
+    /* Estilo específico para el botón de verificar respuestas */
+    #verifyButton {
+        border-radius: 5px;
+        margin: 10px;
+        border: none;
+        cursor: pointer;
+         color: white;
+        padding: 15px 25px; /* Hizo el botón más grande */
+        font-size: 1.5em; /* Aumentó el tamaño de la fuente */
+        background-color: #121920; /* Color verde más fuerte */
+    }
+
+    #verifyButton:hover {
+        background-color: red; /* Color verde aún más oscuro al pasar el ratón */
+    }
+
+</style>
+
+<header>
+    <h1>GERMANY ENGLISH</h1>   
+</header>
+
+<nav>
+    <a href="#intro">Past continuos</a>
+    <a href="#cuando">When y While</a>
+    <a href="#mientras">Juego</a>
+    <a href="#comparacion">Formulario</a>
+    <a href="#usos">Mas</a>
+</nav>
 
 <br><br><br><br><br><br>
 
-  <font size="5"><h2>Formulario: Preguntas sobre "When" y "While"</h2></font>
+<font size="5"><h2>Formulario: Preguntas sobre "When" y "While"</h2></font>
 
-  <br>
+<br>
 
 <div class="section" id="comparacion">
 
-  
     <form id="quizForm" onsubmit="return checkAnswers(event)">
         
         <div id="q1" class="question">
@@ -59,8 +231,8 @@
 
         <div id="q5" class="question">
             <label>5. Completa la oración: "They were talking __ the teacher was explaining the lesson." (when / while)</label><br>
-            <input type="radio" name="q5" value="when"> When<br>
-            <input type="radio" name="q5" value="while"> While<br><br>
+            <input type="radio" name="q5" value="while"> While<br>
+            <input type="radio" name="q5" value="when"> When<br><br>
         </div>
 
         <div id="q6" class="question">
@@ -70,105 +242,107 @@
         </div>
 
         <div id="q7" class="question">
-            <label>7. Completa la oración: "I usually listen to music __ I study." (when / while)</label><br>
-            <input type="radio" name="q7" value="when"> When<br>
-            <input type="radio" name="q7" value="while"> While<br><br>
+            <label>7. Completa la oración: "I was listening to music __ doing my homework." (when / while)</label><br>
+            <input type="radio" name="q7" value="while"> While<br>
+            <input type="radio" name="q7" value="when"> When<br><br>
         </div>
 
         <div id="q8" class="question">
-            <label>8. ¿Qué palabra usarías para hablar de algo que ocurrió a la vez que otra acción? (when / while)</label><br>
+            <label>8. ¿Qué palabra usarías para una acción que ocurre en el mismo momento que otra? (when / while)</label><br>
             <input type="radio" name="q8" value="when"> When<br>
             <input type="radio" name="q8" value="while"> While<br><br>
         </div>
 
         <div id="q9" class="question">
-            <label>9. Completa la oración: "I don't know __ I will see her again." (when / while)</label><br>
+            <label>9. Completa la oración: "I was reading a book __ you were watching TV." (when / while)</label><br>
             <input type="radio" name="q9" value="when"> When<br>
             <input type="radio" name="q9" value="while"> While<br><br>
         </div>
 
         <div id="q10" class="question">
-            <label>10. ¿Qué palabra usarías para hablar de una acción en el pasado que ocurrió cuando otra acción comenzó? (when / while)</label><br>
+            <label>10. ¿Qué palabra usarías para referirte a una acción continua en el pasado? (when / while)</label><br>
             <input type="radio" name="q10" value="when"> When<br>
             <input type="radio" name="q10" value="while"> While<br><br>
         </div>
 
-        <input type="submit" value="Enviar">
-        <input type="button" value="Reiniciar" onclick="resetQuiz()">
+        <br>
+        <input type="submit" id="verifyButton" value="Verificar respuestas">
+        <button type="button" onclick="resetQuiz()">Reiniciar</button>
     </form>
 
+    <br>
     <div id="result" class="result"></div>
-
-    <script>
-        // Respuestas correctas predefinidas
-        var answers = {
-            q1: "a", // "When" se usa para un momento específico y "while" para acciones simultáneas
-            q2: "when", // When
-            q3: "while", // While
-            q4: "no", // No
-            q5: "while", // While
-            q6: "when", // When
-            q7: "while", // While
-            q8: "while", // While
-            q9: "when", // When
-            q10: "while" // While
-        };
-
-        function checkAnswers(event) {
-            event.preventDefault(); // Prevenir el envío del formulario
-
-            var correctAnswers = 0;
-            var totalQuestions = 10;
-
-            // Recorrer todas las preguntas
-            for (var i = 1; i <= totalQuestions; i++) {
-                var selected = document.querySelector(`input[name="q${i}"]:checked`);
-                var correctOption = answers[`q${i}`];
-
-                var questionDiv = document.getElementById(`q${i}`);
-
-                // Limpiar cualquier color previo de la pregunta
-                questionDiv.classList.remove("correct", "incorrect");
-
-                if (selected) {
-                    if (selected.value === correctOption) {
-                        // Marcar la respuesta y pregunta como correcta: cambiar color de letra a verde
-                        selected.parentNode.classList.add("correct");
-                        questionDiv.classList.add("correct");
-                        correctAnswers++; // Incrementar contador de respuestas correctas
-                    } else {
-                        // Marcar la respuesta y pregunta como incorrecta: cambiar color de letra a rojo
-                        selected.parentNode.classList.add("incorrect");
-                        questionDiv.classList.add("incorrect");
-                    }
-                }
-            }
-
-            // Calcular el puntaje
-            var score = (correctAnswers / totalQuestions) * 100;
-            var resultText = `Tu calificación es: ${score}%`;
-
-            // Mostrar el resultado
-            document.getElementById("result").innerHTML = resultText;
-        }
-
-        function resetQuiz() {
-            // Reiniciar el formulario
-            var form = document.getElementById("quizForm");
-            form.reset();
-            
-            // Limpiar los colores de las respuestas
-            var allQuestions = document.querySelectorAll(".question");
-            allQuestions.forEach(function(question) {
-                question.classList.remove("correct", "incorrect");
-            });
-
-            // Limpiar el resultado
-            document.getElementById("result").innerHTML = "";
-        }
-    </script>
-
 </div>
+
+<script>
+    var answers = {
+        q1: "a",
+        q2: "when",
+        q3: "while",
+        q4: "no",
+        q5: "while",
+        q6: "when",
+        q7: "while",
+        q8: "while",
+        q9: "when",
+        q10: "while"
+    };
+
+    function checkAnswers(event) {
+        event.preventDefault(); // Prevenir el envío del formulario
+
+        var correctAnswers = 0;
+        var totalQuestions = 10;
+
+        // Recorrer todas las preguntas
+        for (var i = 1; i <= totalQuestions; i++) {
+            var selected = document.querySelector(`input[name="q${i}"]:checked`);
+            var correctOption = answers[`q${i}`];
+
+            var questionDiv = document.getElementById(`q${i}`);
+
+            // Limpiar cualquier color previo de la pregunta
+            questionDiv.classList.remove("correct", "incorrect");
+
+            if (selected) {
+                if (selected.value === correctOption) {
+                    // Marcar la respuesta y pregunta como correcta: cambiar color de letra a verde
+                    selected.parentNode.classList.add("correct");
+                    questionDiv.classList.add("correct");
+                    correctAnswers++; // Incrementar contador de respuestas correctas
+                } else {
+                    // Marcar la respuesta y pregunta como incorrecta: cambiar color de letra a rojo
+                    selected.parentNode.classList.add("incorrect");
+                    questionDiv.classList.add("incorrect");
+                }
+            } else {
+                // Si no se ha marcado ninguna opción, marcar la pregunta como incorrecta
+                questionDiv.classList.add("incorrect");
+            }
+        }
+
+        // Calcular el puntaje
+        var score = (correctAnswers / totalQuestions) * 100;
+        var resultText = `Tu calificación es: ${score}%`;
+
+        // Mostrar el resultado
+        document.getElementById("result").innerHTML = resultText;
+    }
+
+    function resetQuiz() {
+        var form = document.getElementById('quizForm');
+        form.reset(); // Reinicia el formulario
+        var resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = ''; // Elimina el resultado mostrado
+
+        // Limpiar los estilos de respuestas anteriores
+        var questionDivs = document.querySelectorAll('.question');
+        questionDivs.forEach(function(div) {
+            div.classList.remove("correct", "incorrect");
+        });
+    }
+</script>
 
 </body>
 </html>
+
