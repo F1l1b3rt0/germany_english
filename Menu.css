@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/*CSS Reset*/
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.carousel-inner img{
+    filter: brightness(30%);
+}
+
+img{
+    filter: brightness(30%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:copperplate;
+    background-color: black   ; 
+    color: #00796b; 
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center; 
+}
+
+header {
+    background-color: #040914; 
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    text-align: center;
+    text-shadow: 0 0 5px white  , 0 0 25px white  ;
+} 
+
+header h1 {
+    font-size: 1.8em;
+}
+
+header h1:hover {
+    cursor: pointer;
+    transform: scale(1.03); 
+}
+
+nav {
+    background-color: #17202a; 
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 70px; 
+    left: 0;
+    z-index: 1000; 
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 0 15px;
+    text-shadow: 0 0 5px #ffe2e2  , 0 0 65px red ;
+}
+
+nav a:hover {
+    cursor: pointer;
+    transform: scale(1.03); 
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: pointer;
+    transform: scale(1.03); 
+    color: white;  
+}
+
+a{
+    text-decoration: none;
+}
+
+.carousel-inner h1{
+    text-align: center;
+    position: relative; top: -250px;
+    color:white;
+    text-shadow: 0 0 5px white , 0 0 25px white;
+}
+
+.carousel-inner p{
+    text-align: center;
+    position: relative; top: -250px
+}
+
+.carousel-item h1{
+    text-align: center;
+    position: relative; top: -250px;
+    color:white;
+    text-shadow: 0 0 5px white , 0 0 25px white;
+}
+
+.carousel-item p{
+    text-align: center;
+    position: relative; top: -250px
+}

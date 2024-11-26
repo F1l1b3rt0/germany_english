@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1e1e2f;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #121920 ; 
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    text-align: center;
+    text-shadow: 0 0 5px white  , 0 0 25px white  ;
+} 
+
+header h1 {
+    font-size: 1.8em;
+}
+header h1:hover {
+    cursor: pointer;
+    transform: scale(1.03); 
+}
+
+
+
+nav {
+    background-color: #17202a; 
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 70px; 
+    left: 0;
+    z-index: 1000; 
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin: 0 15px;
+    text-shadow: 0 0 5px #ffe2e2  , 0 0 65px red ;
+
+}
+
+nav a:hover {
+    cursor: pointer;
+    transform: scale(1.03); 
+    color: white;
+    
+}
+
+a:hover{
+    cursor: pointer;
+    transform: scale(1.03); 
+    color: white;  
+}
+
+.container {
+    margin: 150px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #2a2b4e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+#zombieCanvas {
+    border: 2px solid white;
+    margin-bottom: 20px;
+}
+#hint {
+    font-size: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+#guessedLetters {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+input, button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+}
+button {
+    cursor: pointer;
+    background-color: #3e8e41;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #357a38;
+}
+.audio-btn {
+    background-color: #555;
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+#status {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+ /* Estilos básicos para el menú */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Estilo para el enlace principal */
+li {
+    display: inline-block;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #4CAF50; /* Color de texto */
+    display: block;
+    background-color: transparent; /* Sin fondo */
+    border: none; /* Sin borde */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Estilo para el dropdown */
+ul.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: #12181f ;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+ul.dropdown-content li a {
+    padding: 10px 20px;
+    background-color:  #12181f ;
+    color: black;
+    display: block;
+    text-decoration: none;
+}
+
+ul.dropdown-content li a:hover {
+    background-color:  #12181f;
+    color: white;
+}
+
+/* Mostrar el dropdown al pasar el ratón sobre el enlace */
+li:hover > ul.dropdown-content {
+    display: block;
+}
